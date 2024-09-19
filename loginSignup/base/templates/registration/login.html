@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+<div class="shadow-wrap">
+    <div class="form-wrap">
+        <h1>LOGIN</h1>
+        <form  method="POST">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit">Submit</button>
+        </form>
+        <a  class = "signup-link" href="{% url 'base:authview' %}">signup</a>
+    </div>
+</div>
+    {% endblock content %}a
+    
+</body>
+</html>
